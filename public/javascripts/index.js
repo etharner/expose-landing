@@ -1,3 +1,6 @@
 $(document).ready(function() {
-	$('#fullpage').fullpage();
+	$('#fullpage').fullpage({
+    anchors: ['start', 'func', 'why', 'team'],
+    menu: '#menu'
+  });
 });

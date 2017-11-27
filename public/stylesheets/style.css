@@ -6,3 +6,64 @@ body {
 a {
   color: #00B7FF;
 }
+
+li {
+  float: left;
+  display: inline-block;
+}
+
+.start {}
+
+.start:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.3;
+  background:
+    linear-gradient(
+      rgba(106, 143, 133, 0.5), 
+      rgba(106, 143, 133, 0.5)
+    ),
+    url('/images/b1.jpeg');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.func {
+  background-color: blue;
+}
+
+.why {
+  background-color: green;
+}
+
+.team {
+  background-color: brown;
+}
+
+.aboutapp {
+  float: left;
+  width: 80%;
+  height: 100%;
+}
+
+.imgapp {
+  float: right;
+  width: 20%;
+  height: 100%;
+}
+
+.imgapp img {
+  height: 100%;
+  width: 100%;
+}

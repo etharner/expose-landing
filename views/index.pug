@@ -1,10 +1,20 @@
 extends layout
 
 block content
-  h1= title 
-  p Welcome to #{title}
+  //- ul(id="menu")
+  //-   li(data-menuanchor='start' class='active')
+  //-     a(href='#start') Expose
+  //-   li(data-menuanchor='func')
+  //-     a(href='#func') Функции
+  //-   li(data-menuanchor='why')
+  //-     a(href='#why') Зачем?
+  //-   li(data-menuanchor='team')
+  //-     a(href='#team') Команда
   div(id='fullpage')
-    div(class='section') Section1
-    div(class='section') Section1
-    div(class='section') Section1
-    div(class='section') Section1
+    div(class='section start') 
+      div(class='aboutapp')
+      div(class='imgapp')
+        img(src='images/1.png')
+    div(class='section func') Section1
+    div(class='section why') Section1
+    div(class='section team') Section1
