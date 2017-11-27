@@ -1,0 +1,1 @@
+ set DEBUG=expose-landing:* & npm start
