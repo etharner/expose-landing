@@ -32,7 +32,7 @@ h1 {
       rgba(81, 109, 107, 0.95), 
       rgba(81, 109, 107, 0.95)
     ),
-    url('/images/b1.jpeg');
+    url('/images/b1.jpg');
   background-repeat: no-repeat;
   background-size: cover;  
 }
@@ -54,7 +54,7 @@ h1 {
       rgba(81, 109, 100, 0.95), 
       rgba(89, 109, 100, 0.95)
     ),
-    url('/images/b3.jpeg');
+    url('/images/b3.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
