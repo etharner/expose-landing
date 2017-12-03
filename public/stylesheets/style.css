@@ -135,9 +135,22 @@ h1 {
   margin: auto;
 }
 
+.contact {
+  position: relative;
+  top: 40%; left: 20%;
+  transform: translate(-20%, -40%);
+  width: 500px;
+  height: 100px;
+  text-align: center;
+}
+
+.contact h3 {
+  color: rgb(227, 240, 237);
+}
+
 .teamlist {
   position: relative;
-  margin: 0 auto;
+  margin: -100px 800px;
   width: 900px;
   height: 900px;
   color: red;
