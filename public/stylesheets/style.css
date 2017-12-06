@@ -238,6 +238,12 @@ img {
   line-height: 50px;
 }
 
+@media only screen and (max-width: 1315px) {
+  .about h3 {
+    font-size: 30px;
+  }
+}
+
 .rightdiv-last .logo img {
   margin-top: 5%;
   width: 30%;
