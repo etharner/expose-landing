@@ -214,7 +214,19 @@ img {
   height: auto;
 }
 
-.leftdiv .about {
+.leftdiv-last {
+  float: left;
+  width: 60%;
+  height: 100%;
+}
+
+.rightdiv-last {
+  float: right;
+  width: 40%;
+  height: 100%;
+}
+
+.about {
   position: relative;
   margin: auto auto;
   width: 80%;
@@ -226,7 +238,7 @@ img {
   line-height: 50px;
 }
 
-.rightdiv .logo img {
+.rightdiv-last .logo img {
   margin-top: 5%;
   width: 30%;
 }
