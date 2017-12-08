@@ -303,6 +303,27 @@ textarea#message.form-control {
 }
 
 .subscribe-btn {
+  margin: 0px;
+  -moz-transform:rotate(90deg);
+  -ms-transform:rotate(90deg);
+  -o-transform:rotate(90deg);
+  -webkit-transform:rotate(90deg);
+  transform-origin: bottom right;
+  position: fixed;
+  top: 70%;
+  left: -35%;
+  width: 35%;
+  height: 5%;
+  z-index: 15;
+  text-align: center;
+  font-size: 100%;
+  font-family: inherit;
+  background: rgb(227, 240, 237);
+  border: 1px solid white;
+  border-radius: 10px 10px 0 0;
+}
+
+/* .subscribe-btn {
   position: fixed;
   margin: 0;
   transform: rotate(90deg);
@@ -317,4 +338,4 @@ textarea#message.form-control {
   background: rgb(227, 240, 237);
   border: 1px solid white;
   border-radius: 10px 10px 0 0;
-}
+} */
