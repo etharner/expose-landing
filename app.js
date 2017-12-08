@@ -29,19 +29,20 @@ app.post("/", function(req, res){
 	var domain = 'sandbox69149603fe334713b5a1cb7fa9e5d94d.mailgun.org';
 	var mailgun = require('mailgun-js')({apiKey: api_key, domain: domain});
  
+	console.log(req.body);
 	var data = {
 	  from: 'Exposeapp Feedback <postmaster@sandbox69149603fe334713b5a1cb7fa9e5d94d.mailgun.org>',
 		to: 'qvers1@gmail.com',
-		subject: req.body._name,
+		subject: req.body._name + ' ' + req.body._email,
 		text: req.body._message
 	};
  
 	mailgun.messages().send(data, function (error, body) {
   		console.log(body);
-  		// if (!error)
-  		// 	//res.send("Mail sent");
-  		// else
-  		// 	//res.send("Mail not sent"); 				
+  		if (!error)
+  			res.end("Mail sent");
+  		else
+				res.end("Mail not sent"); 				
 	});
 });
 
