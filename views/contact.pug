@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  .main.container
+    .row
+      .col-md-6.col-md-offset-3
+        h1.display-4.m-b-2 Test
+
+        // register form
+        form(method='POST' action='/contact')
+          div.form-group
+            label(for='name') Your name:
+            input#name.form-control(type='text', placeholder='name' name='_name')
+          div.form-group
+            label(for='message') Your message:
+            input#message.form-control(type='text', placeholder='message' name='_message')
+          button.btn.btn-primary(type='submit') Submit
