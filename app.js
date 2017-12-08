@@ -6,8 +6,6 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
-var users = require('./routes/users');
-var contact = require('./routes/contact');
 
 var app = express();
 
@@ -24,18 +22,15 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/users', users);
-app.use('/contact', contact);
-
 
 //POSTS
-app.post("/contact", function(req, res){
+app.post("/", function(req, res){
 	var api_key = 'key-cafe5548a0a07a810a515d4dcf842204';
 	var domain = 'sandbox69149603fe334713b5a1cb7fa9e5d94d.mailgun.org';
 	var mailgun = require('mailgun-js')({apiKey: api_key, domain: domain});
  
 	var data = {
-	  	from: 'Exposeapp Feedback <postmaster@sandbox69149603fe334713b5a1cb7fa9e5d94d.mailgun.org>',
+	  from: 'Exposeapp Feedback <postmaster@sandbox69149603fe334713b5a1cb7fa9e5d94d.mailgun.org>',
 		to: 'qvers1@gmail.com',
 		subject: req.body._name,
 		text: req.body._message
@@ -43,10 +38,10 @@ app.post("/contact", function(req, res){
  
 	mailgun.messages().send(data, function (error, body) {
   		console.log(body);
-  		if (!error)
-  			res.send("Mail sent");
-  		else
-  			res.send("Mail not sent"); 				
+  		// if (!error)
+  		// 	//res.send("Mail sent");
+  		// else
+  		// 	//res.send("Mail not sent"); 				
 	});
 });
 
