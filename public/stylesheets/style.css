@@ -308,34 +308,103 @@ textarea#message.form-control {
   -ms-transform:rotate(90deg);
   -o-transform:rotate(90deg);
   -webkit-transform:rotate(90deg);
-  transform-origin: bottom right;
+  transform-origin: bottom left;
   position: fixed;
-  top: 70%;
-  left: -35%;
-  width: 35%;
-  height: 5%;
+  top: 15%;
+  max-width: 40%;
+  max-height: 5%;
   z-index: 15;
   text-align: center;
-  font-size: 100%;
+  font-size: 80%;
   font-family: inherit;
-  background: rgb(227, 240, 237);
-  border: 1px solid white;
+  background: rgb(224, 207, 160);
+  border: 1px solid rgba(227, 240, 237, 0);
   border-radius: 10px 10px 0 0;
 }
 
-/* .subscribe-btn {
+.subscribe-btn:focus {
+  outline: none; 
+}
+
+.content-blured {
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
+.subscribe-form {
+  display: none;
   position: fixed;
-  margin: 0;
-  transform: rotate(90deg);
+  z-index: 17;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(54, 71, 67, 0.699);
+}
+
+.subscribe-content {
+  position: relative;
+  margin: auto auto;
+  width: 50%;
+  height: 50%;
   top: 50%;
-  left: -16%;
-  width: 35%;
-  height: 5%;
-  font-size: 100%;
+  transform: translateY(-50%);
+}
+
+.subscribe-content input, .subscribe-content button {
+  position: relative;
+  margin: 0 10%;
+  padding-left: 2%;
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box;    
+  box-sizing: border-box;         
+  width: 80%;
+  height: 20%;
+  top: 30%;
+  transform: translateY(-30%);
+  font-size: 150%;
+  background: white;
+  border: 0;
+  border-radius: 5px;
+  outline: none;
+}
+
+.subscribe-content button {
+  margin-top: 5%;
+  padding-left: 0;
+  color: white;
+  background: rgb(123, 145, 143);
+}
+
+@keyframes anim {
+  0%   {top: -20%; opacity: 0;}
+  25%  {top: -3%; opacity: 0.5;}
+  50%  {top: 2%; opacity: 1;}
+  100% {top: -20%; opacity: 0;}
+}
+
+.posted {
+  position: fixed;
+  padding-top: 1%;
+  left: 35%;
+  top: 2%;
+  width: 30%;
+  height: 10%;
+  text-align: center;
+  background: rgb(114, 185, 160);
+  border: 0;
+  border-radius: 100px;
+  -webkit-animation-name: anim; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
+  animation-name: anim;
+  animation-duration: 3s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.posted h1 {
   font-family: inherit;
-  writing-mode: vertical-rl;
-  text-orientation: upright;
-  background: rgb(227, 240, 237);
-  border: 1px solid white;
-  border-radius: 10px 10px 0 0;
-} */
+  font-size: 150%;
+  color: white;
+}

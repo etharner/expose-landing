@@ -34,15 +34,12 @@ app.post("/", function(req, res){
 	  from: 'Exposeapp Feedback <postmaster@sandbox69149603fe334713b5a1cb7fa9e5d94d.mailgun.org>',
 		to: 'qvers1@gmail.com',
 		subject: req.body._name + ' ' + req.body._email,
-		text: req.body._message
+		text: req.body._message ? req.body._message : "Подписался"
 	};
  
 	mailgun.messages().send(data, function (error, body) {
   		console.log(body);
-  		if (!error)
-  			res.end("Mail sent");
-  		else
-				res.end("Mail not sent"); 				
+			res.render('index', { posted: 'true' });			
 	});
 });
 

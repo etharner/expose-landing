@@ -10,63 +10,71 @@ block content
   //-     a(href='#why') Зачем?
   //-   li(data-menuanchor='team')
   //-     a(href='#team') Команда
+  if posted
+    div(class='posted')
+      h1 Спасибо за отзыв!
   button(class='subscribe-btn') Подпишись и стань одним из первых пользователей!
-  div(class='section start') 
-    div(class='title')
-      div
-        h1 Expose
-        p Устройте выставку прямо у себя дома!
-    div(class='titleimg')
-      img(src='images/1.png')
-  div(class='section why')
-    center
-      ul
-        li Вы обустраиваете Ваш интерьер?
-        li Хотите примерить картину?
-        li В вашем городе редко проходят интересные выставки?
-        li Не желаете тратить время на поездку за тем, что может Вам не понравиться?
-  div(class='section func')
-    div(class='leftdiv')
-      div(class='piece')
-        h2 Работы всех художников мира в одном приложении
-      img(src='images/2.png')
-    div(class='centerdiv')
-      p Для организации виртуальной выставки картин теперь достаточно ровных стен и нашего приложения дополненной реальности
-    div(class='rightdiv')
-      div(class='piece')
-        h2 Понравилась картина? Примерь ее в свой интерьер
-      img(src='images/3.png')
-  div(class='section team')
-    div(class='leftdiv-last')
-      div(class='about')
-        h2 Интересно? Пишите нам!
-        h3 exposeapp@hotmail.com
-        form(method='POST' action='')
-          input#name.form-control(class='a-name' type='text', placeholder='Имя' name='_name')
-          input#email.form-control(class='a-mail' type='email', placeholder='email' name='_email')
-          textarea#message.form-control(class='a-msg' type='text', placeholder='Сообщение' name='_message')
-          button.btn.btn-primary(class='btn') Отправить  
-    div(class='rightdiv-last')
-      div(class='logo')
-        img(src='images/logo.png')
-        h2 Team Reward
-      div(class='teamitem')
-        h2 Костин Дмитрий
-        h3 Team lead
-      div(class='teamitem')
-        h2 Мартынова Анастасия
-        h3 Маркетолог
-      div(class='teamitem')
-        h2 Шмелев Владлен
-        h3 Программист
-      div(class='teamitem')
-        h2 Игонина Наталья
-        h3 Маркетолог
-      div(class='teamitem')
-        h2 Цедрик Никита
-        h3 Программист
-      div(class='teamitem')
-        h2 Черныш Татьяна
-        h3 Дизайнер      
+  div(class='subscribe-form')
+    form(class='subscribe-content' method='POST' action='')
+      input(type='email' placeholder='email' name='_email')
+      button(type='submit') Подписаться
+  div(class='content')    
+    div(class='section start') 
+      div(class='title')
+        div
+          h1 Expose
+          p Устройте выставку прямо у себя дома!
+      div(class='titleimg')
+        img(src='images/1.png')
+    div(class='section why')
+      center
+        ul
+          li Вы обустраиваете Ваш интерьер?
+          li Хотите примерить картину?
+          li В вашем городе редко проходят интересные выставки?
+          li Не желаете тратить время на поездку за тем, что может Вам не понравиться?
+    div(class='section func')
+      div(class='leftdiv')
+        div(class='piece')
+          h2 Работы всех художников мира в одном приложении
+        img(src='images/2.png')
+      div(class='centerdiv')
+        p Для организации виртуальной выставки картин теперь достаточно ровных стен и нашего приложения дополненной реальности
+      div(class='rightdiv')
+        div(class='piece')
+          h2 Понравилась картина? Примерь ее в свой интерьер
+        img(src='images/3.png')
+    div(class='section team')
+      div(class='leftdiv-last')
+        div(class='about')
+          h2 Интересно? Пишите нам!
+          h3 exposeapp@hotmail.com
+          form(method='POST' action='')
+            input#name.form-control(class='a-name' type='text', placeholder='Имя' name='_name' required)
+            input#email.form-control(class='a-mail' type='email', placeholder='email' name='_email')
+            textarea#message.form-control(class='a-msg' type='text', placeholder='Сообщение' name='_message' required)
+            button.btn.btn-primary(class='btn') Отправить  
+      div(class='rightdiv-last')
+        div(class='logo')
+          img(src='images/logo.png')
+          h2 Team Reward
+        div(class='teamitem')
+          h2 Костин Дмитрий
+          h3 Team lead
+        div(class='teamitem')
+          h2 Мартынова Анастасия
+          h3 Маркетолог
+        div(class='teamitem')
+          h2 Шмелев Владлен
+          h3 Программист
+        div(class='teamitem')
+          h2 Игонина Наталья
+          h3 Маркетолог
+        div(class='teamitem')
+          h2 Цедрик Никита
+          h3 Программист
+        div(class='teamitem')
+          h2 Черныш Татьяна
+          h3 Дизайнер      
             
             
