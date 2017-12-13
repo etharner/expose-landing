@@ -74,6 +74,22 @@ h1 {
   background-size: cover;
 }
 
+.start center {
+  height: 100px;
+  line-height: 200%;
+}
+
+.start center h1 {
+  margin: 0;
+  font-family: inherit;
+  font-size: 300%;
+}
+
+.start center h2 {
+  margin: 0;
+  font-size: 250%;
+}
+
 .title {
   position: relative;
   float: left;
