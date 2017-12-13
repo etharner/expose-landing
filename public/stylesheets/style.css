@@ -230,6 +230,13 @@ img {
   height: auto;
 }
 
+.center-img {
+  margin-top: 5%;
+  margin-left: -5%;
+  max-width: 120%;
+}
+
+
 .leftdiv-last {
   float: left;
   width: 60%;
